@@ -1,12 +1,12 @@
 [Unit]
-Description=Bybit Quant Bot V8.0
-After=network.target postgresql.service
+Description=Bybit Quant Bot - Scanner
+After=network.target
 
 [Service]
 Type=simple
-User=root
-WorkingDirectory=/opt/bybit_bot_v8
-ExecStart=/opt/bybit_bot_v8/venv/bin/python main.py
+User=evonic
+WorkingDirectory=/home/evonic/futurabot
+ExecStart=/home/evonic/futurabot/venv/bin/python main.py
 Restart=always
 RestartSec=5
 Environment="BOT_ENV=production"

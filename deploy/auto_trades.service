@@ -1,0 +1,15 @@
+[Unit]
+Description=Bybit Quant Bot - Trade Executor
+After=network.target bybit_bot.service
+
+[Service]
+Type=simple
+User=evonic
+WorkingDirectory=/home/evonic/futurabot
+ExecStart=/home/evonic/futurabot/venv/bin/python auto_trades.py
+Restart=always
+RestartSec=5
+Environment="BOT_ENV=production"
+
+[Install]
+WantedBy=multi-user.target
